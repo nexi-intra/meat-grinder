@@ -69,8 +69,6 @@ IsIntegerOrMinusOne "   1 "  # returns 1
 IsIntegerOrMinusOne "2"      # returns 2
 ```
 
-````
-
 ### `Get-KPIValue -Data <Array> -KPI <String> -Field <Array>`
 
 Fetches a particular KPI value from the data array based on the KPI name and field (e.g., numerator or denominator). If the KPI or field is not found, returns `-1`.
@@ -156,8 +154,3 @@ Make sure you have all prerequisites and correct environment configurations befo
 
 - This script utilizes `magic-mix`, which is a placeholder for custom import/export commands. Ensure these commands are defined or replaced with your actual data processing utilities.
 - Adjust the `Get-KPIValue` and KPI extraction logic in `ExtractKPIs` if new KPIs need to be included or the source format changes.
-
-```
-
-```
-````
