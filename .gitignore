@@ -1,2 +1,4 @@
 temp.ps1
 .koksmat/workdir/*/** 
+.koksmat/workdir/devicekpi.xlsx
+.koksmat/workdir/kpis.json
