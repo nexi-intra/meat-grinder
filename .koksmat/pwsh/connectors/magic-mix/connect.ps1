@@ -16,9 +16,20 @@ try {
   $magicmixpath = join-path $workdir "magic-mix"
   if (!(Test-Path $magicmixpath) ) {
     git clone --depth=1 https://github.com/magicbutton/magic-mix  
+    write-host "Cloned magic-mix"
   
     set-location (Join-Path $workdir magic-mix ".koksmat" "app")
-    go install  
+    write-host "Downloading dependencies"
+    go mod tidy
+    
+
+    write-host "Building magic-mix"
+    go build
+
+    Add-Content -Path $env:GITHUB_PATH -Value (Get-Location)
+
+    
+    
   }
   $result = magic-mix sql query mix "select 1 as one"
   if ($result -ne '[{"one":1}]') {
@@ -32,5 +43,6 @@ catch {
 }
 Pop-Location
 
-
+# write-host "Checking if the command is available"
+magic-mix
 
