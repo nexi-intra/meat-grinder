@@ -1,0 +1,3 @@
+# Magic Buttons
+
+Here you store the single push actions that can do the magic...

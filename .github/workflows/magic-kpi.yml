@@ -2,27 +2,31 @@ name: Magic KPI
 
 on:
   workflow_dispatch:
-  # schedule:
-  #   - cron: "0 2 * * 1-5"
+  schedule:
+    - cron: "0 2 * * 1-5"
 
 jobs:
   run-script:
     runs-on: ubuntu-latest
     env:
-      # Define environment variables here
-      WORKDIR: ${{ github.workspace }}
-
       DEVICEKPIBLOB: ${{ secrets.DEVICEKPIBLOB }}
-      GRAPH_APPID: ${{ secrets.GRAPH_APPID }}
       GRAPH_APPSECRET: ${{ secrets.GRAPH_APPSECRET }}
-      GRAPH_APPDOMAIN: ${{ secrets.GRAPH_APPDOMAIN }}
-      GRAPH_ACCESSTOKEN: ${{ secrets.GRAPH_ACCESSTOKEN }}
+      APPCLIENT_SECRET: ${{ secrets.APPCLIENT_SECRET }}
+
+      GRAPH_APPID: ${{ vars.GRAPH_APPID }}
+      GRAPH_APPDOMAIN: ${{ vars.GRAPH_APPDOMAIN }}
       POSTGRES_DB: ${{ secrets.POSTGRES_DB }}
+      APPCLIENT_ID: ${{ vars.APPCLIENT_ID }}
+      APPCLIENT_DOMAIN: ${{ vars.APPCLIENT_DOMAIN }}
+      SITEURL: ${{ vars.SITEURL }}
+      AADDOMAIN: ${{ vars.AADDOMAIN }}
+      MAILTO: ${{ vars.MAILTO }}
+      MAILFROM: ${{ vars.MAILFROM }}
 
     steps:
       - name: Check out repository
         uses: actions/checkout@v3
 
       - name: KPI Data
-        run: pwsh "./magic-kpi.ps1"
+        run: pwsh "./00/kpi/run.ps1"
         shell: pwsh
