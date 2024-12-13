@@ -1,8 +1,4 @@
 param ($dryrun = $false)
-$ErrorActionPreference = "Stop"
-$ProgressPreference = "SilentlyContinue"
-$VerbosePreference = "SilentlyContinue"
-$DebugPreference = "SilentlyContinue"
 
 $workdir = join-path $psscriptroot ".." ".." ".koksmat" "workdir"
 
