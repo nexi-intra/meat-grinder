@@ -1,12 +1,12 @@
-# Meat-Grinder
+# Koksmat-Grinder
 
 _"From Hero to Zero – Make Action Scripts That Can Be Debugged Locally and Execute Globally"_
 
-Welcome to the **Meat-Grinder** repository—your one-stop pipeline for turning raw ingredients (code, configurations, tests) into fully-formed deliverables. Think of it as a metaphorical grinder, taking in all sorts of inputs and consistently churning out reliable, shippable outcomes. Instead of managing a buffet of disjointed Cloud Native tools, we’re streamlining the entire process using only GitHub Actions at the core of our assembly line.
+Welcome to the **Koksmat-Grinder** repository—your one-stop pipeline for turning raw ingredients (code, configurations, tests) into fully-formed deliverables. Think of it as a metaphorical grinder, taking in all sorts of inputs and consistently churning out reliable, shippable outcomes. Instead of managing a buffet of disjointed Cloud Native tools, we’re streamlining the entire process using only GitHub Actions at the core of our assembly line.
 
-## Why "Meat-Grinder"?
+## Why "Koksmat-Grinder"?
 
-In the world of Cloud Native, it’s easy to feel like a hero juggling countless tools—Argo CD, Argo Workflows, Crossplane, and beyond. But there’s a cost: complexity, steep learning curves, fragmented pipelines, and slow feedback loops. **The Meat-Grinder** is about simplifying that: feed in what you have, let one robust, predictable mechanism do its work, and produce a uniform output ready for production.
+In the world of Cloud Native, it’s easy to feel like a hero juggling countless tools—Argo CD, Argo Workflows, Crossplane, and beyond. But there’s a cost: complexity, steep learning curves, fragmented pipelines, and slow feedback loops. **The Koksmat-Grinder** is about simplifying that: feed in what you have, let one robust, predictable mechanism do its work, and produce a uniform output ready for production.
 
 ### The Core Idea
 
@@ -17,7 +17,7 @@ In the world of Cloud Native, it’s easy to feel like a hero juggling countless
 
 ### Koksmat: The Missing Ingredient
 
-**Koksmat** is a concept/tool under exploration to add a pinch of extra spice to this simplified approach. Where Meat-Grinder standardizes the pipeline, Koksmat aims to enhance it—filling gaps and offering patterns that speed up your day-to-day work. It might help with boilerplate generation, specialized workflows, or tackling those edge cases that currently require multiple third-party integrations.
+**Koksmat** is a concept/tool under exploration to add a pinch of extra spice to this simplified approach. Where Koksmat-Grinder standardizes the pipeline, Koksmat aims to enhance it—filling gaps and offering patterns that speed up your day-to-day work. It might help with boilerplate generation, specialized workflows, or tackling those edge cases that currently require multiple third-party integrations.
 
 **Note:** Koksmat is in its infancy. Consider this a call for contributions and critiques. How can we make these simple pipelines even more delightful?
 
@@ -25,14 +25,14 @@ In the world of Cloud Native, it’s easy to feel like a hero juggling countless
 
 - **Action Blueprints:** Ready-to-use GitHub Actions workflows for building, testing, packaging, and deploying apps or infrastructure components.
 - **Local Debug Recipes:** Guidance on how to use `act` or other tools to quickly run pipelines locally, so you can fail fast and fix faster.
-- **Koksmat Integration Points:** Early examples and experiments that hint at how Koksmat could integrate into a Meat-Grinder workflow—like templates, scripts, or reference configs.
+- **Koksmat Integration Points:** Early examples and experiments that hint at how Koksmat could integrate into a Koksmat-Grinder workflow—like templates, scripts, or reference configs.
 
 ## Getting Started
 
 1. **Clone This Repo:**
    ```bash
-   git clone https://github.com/youruser/meat-grinder.git
-   cd meat-grinder
+   git clone https://github.com/youruser/Koksmat-Grinder.git
+   cd Koksmat-Grinder
    ```
 2. **Install Local Debug Tool (`act`):**
    Follow the instructions from [act’s repository](https://github.com/nektos/act) to get set up.
@@ -56,4 +56,4 @@ We welcome all forms of collaboration—contribute Action templates, propose fea
 
 ---
 
-**In essence, Meat-Grinder + Koksmat** is about turning the high-art complexity of Cloud Native operations into something more grounded, more hackable, and ultimately more humane.
+**In essence, Koksmat-Grinder + Koksmat** is about turning the high-art complexity of Cloud Native operations into something more grounded, more hackable, and ultimately more humane.
