@@ -1,5 +1,5 @@
 param (
-  [string]$OutputFile = "temp.ps1"
+  [string]$OutputFile = "_temp.ps1"
 )
 
 # If the output file already exists, remove it to start fresh
@@ -74,20 +74,22 @@ foreach ($envPath in $envFiles) {
     }
   }
 }
+
+$workdir = [System.IO.Path]::GetFullPath((join-path $PSScriptRoot ".." ".." ".koksmat" "workdir")) 
+if (-not (Test-Path $workdir)) {
+  New-Item -Path $workdir -ItemType Directory | Out-Null
+}
+
 @"
+
+
 #--------------------------------------
 #  End of .env files
 #
 #  Applying Addtional settings
 # 
 #--------------------------------------
-
+`$env:WORKDIR = "$workdir"
+write-host "WORKDIR: `$workdir"
 
 "@ | Out-File -FilePath $OutputFile -Append -Encoding UTF8
-
-($dollar + "env:workdir = """"") | Out-File -FilePath $OutputFile -Append -Encoding UTF8
-Write-Host "Environment variables have been extracted and written to $OutputFile"
-
-$workdir = [System.IO.Path]::GetFullPath((join-path $psscriptroot ".." ".koksmat" "workdir")) 
-
-$env:WORKDIR = $workdir
